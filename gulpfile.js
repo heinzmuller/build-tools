@@ -13,7 +13,7 @@ var config = {
   },
 
   bs: {
-    proxy: '192.168.1.97:8000',
+    proxy: 'localhost:8000',
     browsers: ['google chrome', 'firefox', 'safari']
   },
   
