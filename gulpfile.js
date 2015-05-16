@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 var taskListing  = require('gulp-task-listing');
+var publish      = require('./publish.json');
 
 var config = {
   sass: {
@@ -72,4 +73,12 @@ gulp.task('compile-sass', function(){
 gulp.task('reload', function(){
   gulp.src('.')
   .pipe(reload({ stream: true }));
+});
+
+// Publish files defined in publish.json file 
+gulp.task('publish', function(){
+  publish.files.forEach(function(file){
+    gulp.src(file.src)
+      .pipe(gulp.dest(file.dest));
+  });
 });
