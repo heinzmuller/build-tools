@@ -1,0 +1,10 @@
+{
+	"files": [
+	  /*
+		{
+			"src": "app/assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js",
+			"dest": "public/js/vendor"
+		}
+		*/
+	]
+}
